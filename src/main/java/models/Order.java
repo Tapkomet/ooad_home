@@ -9,9 +9,6 @@ public class Order {
 
     private int amount;
 
-    private string charge;
-
-
 
     public String getAmount() {
         return amount;
@@ -20,12 +17,6 @@ public class Order {
     public void setAmount(String amount) {
         this.amount = amount;
     }
-
-    public void getCharge(){
-
-    }
-
-    public void setCharge(){
 
     }
 
@@ -41,9 +32,7 @@ public class Order {
     public String toString() {
         return "Order{" +
                 "id=" + id +
-                ", amount='" + amount + '\''+
-                ", charge='" + charge + '\''
-
+                ", amount='" + amount + '\''
                 '}';
     }
 

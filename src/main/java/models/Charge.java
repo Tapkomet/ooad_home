@@ -9,8 +9,7 @@ public class Charge {
 
     private int amount;
 
-    //if applicable
-    private string invoice;
+    private Invoice invoice;
 
 
 
@@ -23,11 +22,11 @@ public class Charge {
     }
 
     public void getInvoice(){
-
+        return invoice;
     }
 
-    public void setInvoice(){
-
+    public void setInvoice(Invoice invoice){
+        this.invoice=invoice;
     }
 
     public int getId() {
@@ -43,7 +42,7 @@ public class Charge {
         return "Charge{" +
                 "id=" + id +
                 ", amount='" + amount + '\''+
-                ", invoice='" + invoice + '\''
+                ", invoice id='" + invoice.getId() + '\''
 
                 '}';
     }
