@@ -1,4 +1,4 @@
-package repositories.interfaces;
+package src.main.java.repositories.interfaces;
 
 import models.Order;
 
@@ -9,8 +9,10 @@ public interface OrderService {
     Order getById(int id);
 
     void delete(int id);
-
-    void saveOrUpdate(Order order);
+    
+    void save(Order order);
+    
+    void update(Order order);
 
     List<Order> getAll();
 }

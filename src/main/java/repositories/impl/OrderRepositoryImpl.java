@@ -4,7 +4,7 @@ import models.Order;
 
 import java.util.List;
 
-public interface OrderService {
+public class OrderService {
 
     Order getById(int id) {
 
@@ -14,7 +14,11 @@ public interface OrderService {
 
     };
 
-    void saveOrUpdate(Order order) {
+    void save(Order order) {
+
+    };
+    
+    void update(Order order) {
 
     };
 

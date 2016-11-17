@@ -10,7 +10,11 @@ public interface OrderService {
 
     void delete(int id);
 
-    void saveOrUpdate(Order order);
+    void createOrder(Order order);
+    
+    void save(Order order);
+    
+    void update(Order order);
 
     List<Order> getAll();
 }
