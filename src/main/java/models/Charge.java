@@ -11,6 +11,8 @@ public class Charge {
 
     private Invoice invoice;
 
+    private Boolean paid;
+
 
 
     public String getAmount() {
@@ -28,6 +30,14 @@ public class Charge {
     public void setInvoice(Invoice invoice){
         this.invoice=invoice;
     }
+
+     public Boolean getPaid() {
+         return paid;
+        }
+
+     public void setPaid(Boolean paid) {
+         this.paid = paid;
+        }
 
     public int getId() {
         return id;

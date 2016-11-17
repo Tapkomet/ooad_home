@@ -14,7 +14,11 @@ public class ChargeService {
     //...
     };
 
-    void saveOrUpdate(Charge charge) {
+    void save(Charge charge) {
+    //...
+    };
+
+    void update(Charge charge, int id) {
     //...
     };
 
@@ -22,7 +26,7 @@ public class ChargeService {
     //...
     };
 
-    List<Charge> getByOrder(String order) {
+    List<Charge> getByInvoice(String invoiceId) {
     //...
     };
 }

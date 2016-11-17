@@ -4,6 +4,7 @@ import models.Order;
 import services.interfaces.InvoiceService;
 import repositories.interfaces.OrderRepository;
 
+
 import java.util.List;
 
 public class OrderService {
@@ -11,9 +12,7 @@ public class OrderService {
 	private OrderRepository orderRepository;
 	private InvoiceService invoiceService;
     Order getById(int id) {
-
     	return orderRepository.getById(id);
-    	
     };
 
     void delete(int id) {
@@ -35,7 +34,7 @@ public class OrderService {
     };
 
      void done(Order order) {
-        order.complete=true;
+        order.setComplete(true);
         update(order, order.getId());
      };
 

@@ -10,9 +10,15 @@ public interface ChargeService {
 
     void delete(int id);
 
-    void saveOrUpdate(Charge charge);
+    void save(Charge charge);
+
+    void update(Charge charge, int id);
+
+    void create(Invoice invoice);
+
+    void paid(Charge charge);
 
     List<Charge> getAll();
 
-    List<Charge> getByOrder(String order);
+    List<Charge> getByInvoice(String invoiceId);
 }
