@@ -12,7 +12,7 @@ public interface OrderService {
     
     void save(Order order);
     
-    void update(Order order);
+    void update(Order order, int id);
 
     List<Order> getAll();
 }
