@@ -7,9 +7,6 @@ import services.interfaces.*;
 public class Controller {
 
     @Autowired
-    private ChargeService chargeService;
-
-    @Autowired
     private OrderService orderService;
 
     @RequestMapping(value = "/orders", method = RequestMethod.GET)
