@@ -4,7 +4,7 @@ import models.Charge;
 
 import java.util.List;
 
-public interface ChargeService {
+public class ChargeService {
 
     Charge getById(int id) {
 

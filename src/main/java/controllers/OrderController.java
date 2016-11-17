@@ -1,10 +1,10 @@
-package controllers;
+package src.main.java.controllers;
 
 import models.*;
 import services.interfaces.*;
 
-@Controller
-public class Controller {
+@OrderController
+public class OrderController {
 
     @Autowired
     private ChargeService chargeService;
@@ -22,6 +22,7 @@ public class Controller {
     @RequestMapping(value = "/orders", method = RequestMethod.POST)
     public String createOrder(@ModelAttribute("orderform") Order order) {
 
+    	orderService.placeOrder();
     }
 
 }
