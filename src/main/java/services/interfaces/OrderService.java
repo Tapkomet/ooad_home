@@ -6,15 +6,15 @@ import java.util.List;
 
 public interface OrderService {
 
-    Order getById(int id);
+    Order getById(String id);
 
-    void delete(int id);
+    void delete(String id);
 
     void createOrder(Order order);
     
     void save(Order order);
     
-    void update(Order order, int id);
+    void update(Order order, String id);
 
     List<Order> getAll();
 

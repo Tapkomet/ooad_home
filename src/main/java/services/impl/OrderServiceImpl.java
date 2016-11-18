@@ -11,11 +11,11 @@ public class OrderService {
 
 	private OrderRepository orderRepository;
 	private InvoiceService invoiceService;
-    Order getById(int id) {
+    Order getById(String id) {
     	return orderRepository.getById(id);
     };
 
-    void delete(int id) {
+    void delete(String id) {
     	orderRepository.delete(id);
     	
     };
@@ -29,7 +29,7 @@ public class OrderService {
     	orderRepository.save(order);
     };
 
-    void update(Order order, int id) {
+    void update(Order order, String id) {
     	orderRepository.update(order, id);
     };
 

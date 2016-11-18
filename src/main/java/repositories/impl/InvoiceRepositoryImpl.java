@@ -6,11 +6,11 @@ import java.util.List;
 
 public class InvoiceService {
 
-    Invoice getById(int id) {
+    Invoice getById(String id) {
     //...
     };
 
-    void delete(int id) {
+    void delete(String id) {
     //...
     };
 
@@ -18,7 +18,7 @@ public class InvoiceService {
     //...
     };
 
-    void update(Invoice invoice, int id) {
+    void update(Invoice invoice, String id) {
     //...
     };
 

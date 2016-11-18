@@ -1,18 +1,23 @@
 package services.interfaces;
 
-import models.Charge;
+import models.*;
 import repositories.interfaces.ChargeRepository;
+import services.interfaces.InvoiceService;
+import services.interfaces.PaymentService;
 import java.util.List;
 
 public class ChargeService {
+	private InvoiceService invoiceService;
 
     private ChargeRepository chargeRepository;
+    
+    private PaymentService paymentService;
 
-    Charge getById(int id) {
+    Charge getById(String id) {
         return chargeRepository.getById(id);
     };
 
-    void delete(int id) {
+    void delete(String id) {
         chargeRepository.delete(id);
     };
 
@@ -25,17 +30,24 @@ public class ChargeService {
         charge.setId(invoice.getId());
         charge.setAmount(invoice.getAmount());
         //etc
-
+        //create Stripe Charge. Probably not the correct implementation.
+        Charge.create(charge);
+        
+        //save to db
         save(charge);
 
     };
 
-    void update(Charge charge, int id){
+    void update(Charge charge, String id){
         chargeRepository.update(charge, id);
     };
 
     void paid(Charge charge){
-    charge.setPaid(true);
+    //call this when a payment is made through Stripe
+    Invoice invoice = invoiceService.getById(charge.getInvoice());
+    invoiceService.paid(invoice);
+    paymentService.create(charge);
+    
     update(charge, charge.getId());
     };
 
@@ -43,7 +55,7 @@ public class ChargeService {
         return chargeRepository.getAll();
     };
 
-    List<Charge> getByInvoice(String invoiceId) {
+   Charge getByInvoice(String invoiceId) {
         return chargeRepository.getByInvoice(invoiceId);
     };
 }

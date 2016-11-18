@@ -6,11 +6,11 @@ import java.util.List;
 
 public class ChargeService {
 
-    Charge getById(int id) {
+    Charge getById(String id) {
     //...
     };
 
-    void delete(int id) {
+    void delete(String id) {
     //...
     };
 
@@ -18,7 +18,7 @@ public class ChargeService {
     //...
     };
 
-    void update(Charge charge, int id) {
+    void update(Charge charge, String id) {
     //...
     };
 
@@ -26,7 +26,7 @@ public class ChargeService {
     //...
     };
 
-    List<Charge> getByInvoice(String invoiceId) {
+    Charge getByInvoice(String invoiceId) {
     //...
     };
 }

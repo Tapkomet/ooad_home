@@ -9,23 +9,25 @@ public class Invoice {
 
     private int amount;
 
-    private Order order;
+    private String order;
 
     private Boolean paid;
+    
+    private String payMethod;
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public void getOrder(){
+    public String getOrder(){
         return order;
     }
 
-    public void setOrder(Order order){
+    public void setOrder(String order){
         this.order=order;
     } 
  
@@ -37,13 +39,21 @@ public class Invoice {
          this.paid = paid;
         }  
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
             this.id = id;
         }
+    
+    public String getPayMethod() {
+        return payMethod;
+    }
+
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
+    }
 
     @Override
     public String toString() {

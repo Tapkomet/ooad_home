@@ -9,15 +9,15 @@ public class Order {
 
     private int amount;
 
-    private String paymentType;
+    private String payMethod;
 
     private Boolean complete;
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
@@ -29,21 +29,21 @@ public class Order {
          this.complete = complete;
         }
 
-    public String getPaymentType() {
-            return paymentType;
+    public String getPayMethod() {
+            return payMethod;
         }
 
-    public void setPaymentType(String paymentType) {
-        this.paymentType = paymentType;
+    public void setPayMethod(String payMethod) {
+        this.payMethod = payMethod;
         }
 
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
             this.id = id;
         }
 

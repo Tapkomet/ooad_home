@@ -6,11 +6,11 @@ import java.util.List;
 
 public class OrderService {
 
-    Order getById(int id) {
+    Order getById(String id) {
     //...
     };
 
-    void delete(int id) {
+    void delete(String id) {
     //...
     };
 
@@ -18,7 +18,7 @@ public class OrderService {
     //...
     };
     
-    void update(Order order, int id) {
+    void update(Order order, String id) {
     //...
     };
 

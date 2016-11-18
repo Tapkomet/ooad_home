@@ -9,25 +9,25 @@ public class Charge {
 
     private int amount;
 
-    private Invoice invoice;
+    private String invoice;
 
     private Boolean paid;
 
 
 
-    public String getAmount() {
+    public int getAmount() {
         return amount;
     }
 
-    public void setAmount(String amount) {
+    public void setAmount(int amount) {
         this.amount = amount;
     }
 
-    public void getInvoice(){
+    public String getInvoice(){
         return invoice;
     }
 
-    public void setInvoice(Invoice invoice){
+    public void setInvoice(String invoice){
         this.invoice=invoice;
     }
 
@@ -39,11 +39,11 @@ public class Charge {
          this.paid = paid;
         }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
             this.id = id;
         }
 

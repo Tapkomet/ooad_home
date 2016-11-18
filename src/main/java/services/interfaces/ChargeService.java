@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface ChargeService {
 
-    Charge getById(int id);
+    Charge getById(String id);
 
-    void delete(int id);
+    void delete(String id);
 
     void save(Charge charge);
 
-    void update(Charge charge, int id);
+    void update(Charge charge, String id);
 
     void create(Invoice invoice);
 
@@ -20,5 +20,5 @@ public interface ChargeService {
 
     List<Charge> getAll();
 
-    List<Charge> getByInvoice(String invoiceId);
+    Charge getByInvoice(String invoiceId);
 }

@@ -6,13 +6,13 @@ import java.util.List;
 
 public interface InvoiceService {
 
-    Invoice getById(int id);
+    Invoice getById(String id);
 
-    void delete(int id);
+    void delete(String id);
 
     void save(Invoice invoice);
 
-    void update(Invoice invoice, int id);
+    void update(Invoice invoice, String id);
 
     void create(Order order);
 

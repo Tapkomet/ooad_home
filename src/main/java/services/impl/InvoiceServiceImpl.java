@@ -1,18 +1,23 @@
 package services.interfaces;
 
-import models.Invoice;
 import repositories.interfaces.ChargeRepository;
 import java.util.List;
 
+import models.Invoice;
+import models.Order;
+import services.interfaces.OrderService;
+
 public class InvoiceService {
 
-    private InvoiceRepository InvoiceRepository;
+    private InvoiceRepository invoiceRepository;
+    
+    private OrderService orderService;
 
-    Invoice getById(int id) {
+    Invoice getById(String id) {
         return invoiceRepository.getById(id);
     };
 
-    void delete(int id) {
+    void delete(String id) {
         invoiceRepository.delete(id);
     };
 
@@ -22,20 +27,32 @@ public class InvoiceService {
 
     void create(Order order){
         Invoice invoice = new Invoice;
-        invoice.setId(order.getId());
+        invoice.setOrder(order.getId());
         invoice.setAmount(order.getAmount());
+        invoice.setPayMethod(order.getPayMethod());
         //etc
+        
+        if(invoice.getPayMethod.equals("Stripe")){
+        chargeService.create(invoice);
+        }
+        else{
+        	//...
+        }
+        
 
         save(invoice);
 
     };
 
-    void update(Invoice invoice, int id){
+    void update(Invoice invoice, String id){
         invoiceRepository.update(invoice, id);
     };
 
     void paid(Invoice invoice){
+    
     invoice.setPaid(true);
+    Order order = orderService.getByInvoice(invoice.getId());
+    orderService.done(order);
     update(invoice, invoice.getId());
     };
 
