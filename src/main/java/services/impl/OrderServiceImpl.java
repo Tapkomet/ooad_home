@@ -21,7 +21,7 @@ public class OrderService {
     };
 
     void createOrder(Order order) {
-        invoiceService.createFromOrder(order);
+        invoiceService.create(order);
     	save(order);
     };
 
